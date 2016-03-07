@@ -15,7 +15,7 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
 
   var myZoom = 12;
   //now the fun stuff:  leaflet!
-  var map3 = L.map('map3').setView( [40.743615, -73.925285], myZoom);
+  var map3 = L.map('map3').setView( [40.743615, -73.925285], 11);
     map3.addLayer(layer)
   // //Let's add a marker
   // var marker = L.marker([40.768058,-73.981891]).addTo(map);
