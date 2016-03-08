@@ -4,9 +4,6 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 });
 
-
-
-
   var manhattan = [40.748818,-73.983650];
   var brooklyn = [40.624376,-73.952065];
   var bronx = [40.841606, -73.874817];
@@ -33,34 +30,25 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
         map3.panTo(manhattan, panOptions);
       } 
       
-      else 
-        if 
-
+      else if 
       ($(this).attr('id') == 'two' ) {
         $(this).css('background-color','#453056');
         map3.panTo(brooklyn, panOptions);
       } 
 
-      else 
-        if 
-
+      else if 
       ($(this).attr('id') == 'three' ) {
         $(this).css('background-color','#453056');
         map3.panTo(bronx, panOptions);
       } 
 
-      else 
-        if 
-
+      else if 
       ($(this).attr('id') == 'four' ) {
         $(this).css('background-color','#453056');
         map3.panTo(queens, panOptions);
       } 
 
-
       else {
-
-   
         $(this).css('background-color','#453056');
         map3.panTo(statenisland, panOptions);
       }
@@ -156,9 +144,6 @@ legend.onAdd = function (map) {
 };
 
 legend.addTo(map3);
-
-
-
 
   //all of the helper functions are defined and ready to go, so let's get some data and render it!
 
