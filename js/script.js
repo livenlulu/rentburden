@@ -105,10 +105,8 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
     //update the text in the infowindow with whatever was in the data
     console.log(feature);
 
-    //console.log(layer.feature.properties.rbLocation);
-    $('#infoWindow').html(layer.feature.properties.rbLocation + '<br>' + '<h3>'+layer.feature.properties.rbpercent + '%' + '</h3>'); 
-
-
+    //console.log(layer.feature.properties.rbLocation); 
+    $('#infoWindow').html(layer.feature.properties.rbLocation + '<br>' + '<h3>'+ layer.feature.properties.rbpercent + '%' + '<br>' + '</h3>' + '<br>'  + 'Median Monthly Rent: ' + '<br>' + '<h3>' +'$' +layer.feature.properties.monthlyrentmedianmonthlyrent + '</h3>'); 
   }
 
   // var info = L.control();
@@ -166,7 +164,7 @@ legend.addTo(map3);
   //all of the helper functions are defined and ready to go, so let's get some data and render it!
 
   //be sure to specify style and onEachFeature options when calling L.geoJson().
-  $.getJSON('data/rb.geojson', function(state_data) {
+  $.getJSON('data/rent.geojson', function(state_data) {
     geojson = L.geoJson(state_data,{
       style: style,
       onEachFeature: onEachFeature
