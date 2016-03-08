@@ -1,16 +1,22 @@
-    html, body{
+    html, body {
     width: 100%;
     background: #f5f5f3;
-   }
+    }
 
-    h1{
+    h1 {
       font-size: 22px;
     }
 
     h2 {
-      font-family: 'Oswald';
       font-size: 22px;
       padding-left: 10%;
+      font-weight:700;
+      font-family: 'Oswald';
+      line-height: 30px;
+    }
+
+    h3 {
+      line-height: 2px;
     }
 
     h5 {
@@ -20,6 +26,20 @@
 
     li:visited {
       background-color: grey;
+    }
+
+    #infoWindow {
+      background: #f5f5f3;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 20px;
+      position: relative;
+      top: 10px;
+      width: auto;
+      display: inline;
+      margin-left: 10px;
+      float: left;
+      font-family: 'Oswald';
     }
 
     .map {
@@ -61,22 +81,22 @@
     background-color: white;
     }
 
-    #infoWindow {
-      background: #f5f5f3;
-      padding: 15px;
-      border-radius: 10px;
-      font-size: 20px;
-      position: relative;
-      top: 10px;
-      width: auto;
-      display: inline;
-      margin-left: 10px;
-      float: left;
-      font-family: 'Oswald';
-    }
-
     .navbar-default {
       margin-bottom: 0px;
       cursor: pointer;
+
     }
+    .navbar-default:visited {
+      margin-bottom: 0px;
+      cursor: pointer;
+    }
+
+    .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:visited {
+      background-color: black;
+    }
+
+    a#four.myButton:active, a#four.myButton:hover, a#four.myButton:visited, a#four.myButton:link{
+      background-color: black;
+    }
+
 
