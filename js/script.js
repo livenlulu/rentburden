@@ -77,7 +77,7 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
 
   //this function takes a value and returns a color based on which bucket the value falls between
   function getColor(burden) {
-      return burden > 40 ? '#0c2c84' :
+      return burden > 40 ? '#081d58' :
              burden > 35  ? '#225ea8' :
              burden > 30  ? '#1d91c0' :
              burden > 25   ? '#41b6c4' :
