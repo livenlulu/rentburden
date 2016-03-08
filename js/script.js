@@ -1,6 +1,6 @@
   // var basemapUrl = 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
   // var attribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>';
-var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',{
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 });
 
@@ -89,6 +89,7 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
   //this function is set to run when a user mouses over any polygon
   function mouseoverFunction(e) {
     var layer = e.target;
+    var feature = layer.feature;
 
     layer.setStyle({
         weight: 5,
@@ -102,13 +103,30 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
     }
 
     //update the text in the infowindow with whatever was in the data
-    console.log(layer.feature.properties.rbLocation);
-    $('#infoWindow').text(layer.feature.properties.rbLocation); 
+    console.log(feature);
 
-    console.log(layer.feature.properties.rbpercent);
-    $('#infoWind').text(layer.feature.properties.rbpercent);
+    //console.log(layer.feature.properties.rbLocation);
+    $('#infoWindow').html(layer.feature.properties.rbLocation + '<br>' + '<h3>'+layer.feature.properties.rbpercent + '%' + '</h3>'); 
+
 
   }
+
+  // var info = L.control();
+
+  //   info.onAdd = function (map) {
+  //       this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+  //       this.update();
+  //       return this._div;
+  //   };
+
+  //   // method that we will use to update the control based on feature properties passed
+  //   info.update = function (props) {
+  //       this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
+  //           '<b>' + props.name + '</b><br />' + props.rbpercent+ ' people / mi<sup>2</sup>'
+  //           : 'Hover over a state');
+  //   };
+
+  //   info.addTo(map3);
 
   //this runs on mouseout
   function resetHighlight(e) {
