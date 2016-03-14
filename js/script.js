@@ -26,30 +26,30 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.
 
       $(".myButton").click(function() {
       if($(this).attr('id') == 'one' ) {
-        $(this).css('background-color','#453056');
+        $(this).css('background-color','#000000');
         map3.panTo(manhattan, panOptions);
       } 
       
       else if 
       ($(this).attr('id') == 'two' ) {
-        $(this).css('background-color','#453056');
+        $(this).css('background-color','#000000');
         map3.panTo(brooklyn, panOptions);
       } 
 
       else if 
       ($(this).attr('id') == 'three' ) {
-        $(this).css('background-color','#453056');
+        $(this).css('background-color','#000000');
         map3.panTo(bronx, panOptions);
       } 
 
       else if 
       ($(this).attr('id') == 'four' ) {
-        $(this).css('background-color','#453056');
+        $(this).css('background-color','#000000');
         map3.panTo(queens, panOptions);
       } 
 
       else {
-        $(this).css('background-color','#453056');
+        $(this).css('background-color','#000000');
         map3.panTo(statenisland, panOptions);
       }
     });
